@@ -10,11 +10,11 @@ Students are expected to:
 Member list
 =====================================
 
-Trần Bảo Dương
-Vũ Tuấn Đạt
-Lê Tuấn Hùng
-Hà Anh Tuấn
-Bùi Ngọc Sơn
+- Trần Bảo Dương
+- Vũ Tuấn Đạt
+- Lê Tuấn Hùng
+- Hà Anh Tuấn
+- Bùi Ngọc Sơn
 
 Project description
 =====================================
