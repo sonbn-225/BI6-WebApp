@@ -10,9 +10,13 @@ Students are expected to:
 Member list
 =====================================
 
-*Add student list of your group here*
+Trần Bảo Dương
+Vũ Tuấn Đạt
+Lê Tuấn Hùng
+Hà Anh Tuấn
+Bùi Ngọc Sơn
 
 Project description
 =====================================
 
-*Add your project description here*
+Develop a web application to order food at restaurants
