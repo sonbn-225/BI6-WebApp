@@ -1,15 +1,12 @@
-<div class="section-home-slide">
-    <?php $this->load->view('site/slide'); ?>
+<!-- slide -->
+<div id="tuan" class="container-fluid">
+    <?php $this->load->view('site/container-fluid-tuan'); ?>
 </div>
 
-<div class="margin-top-30">
-    <?php $this->load->view('site/bill'); ?>
+<div class="container text-center" id="so1">
+    <?php $this->load->view('site/container-text-center-so1') ?>
 </div>
 
 <div class="container">
-    <?php $this->load->view('site/home/content_top'); ?>
-</div>
-
-<div class="section-eeeeee margin-top-50 padding-bottom-50">
-    <?php $this->load->view('site/home/content_center'); ?>
+    <?php $this->load->view('site/container') ?>
 </div>

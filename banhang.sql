@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `username`, `password`, `name`) VALUES
-(1, 'admin', 'b4b892e5418149867c8d0b3592b813cd', 'nguyễn thành hậu');
+(1, 'admin', '12345', 'Administrator');
 
 -- --------------------------------------------------------
 
@@ -57,34 +57,9 @@ CREATE TABLE `catalog` (
 --
 
 INSERT INTO `catalog` (`id_catalog`, `name`, `parent_id`) VALUES
-(1, 'Túi Xách', 0),
-(2, 'Thời Trang Nam & Nữ', 0),
-(3, 'Phụ Kiện & Mỹ Phẩm', 0),
-(4, 'Mắt Kính', 0),
-(5, 'Điện Thoại & LapTop', 0),
-(6, 'Clutch 802', 1),
-(7, 'Áo Thun', 2),
-(8, 'Sửa Rửa Mặt', 3),
-(9, 'Kính BiLu', 4),
-(10, 'USB ', 5),
-(11, 'Kính phượt', 4),
-(12, 'Điện Thoại', 5),
-(14, 'Hermes', 1),
-(16, 'Prada', 1),
-(17, 'Chanel', 1),
-(18, 'Louis Vuitton', 1),
-(19, 'Gucci', 1),
-(20, 'Coach', 1),
-(21, 'Son môi', 3),
-(22, 'Nước Hoa', 3),
-(23, 'Phấn Má Hồng', 3),
-(24, 'Cọ Trang Điểm', 3),
-(25, 'Sửa Tắm', 3),
-(26, 'Tai Phone', 5),
-(27, 'Tản Nhiệt', 5),
-(28, 'Balo', 2),
-(29, 'Giày Vans', 2),
-(30, 'Hàng Quảng Châu', 1);
+(1, 'Các món gà', 0),
+(2, 'Phần ăn combo', 0),
+(3, 'Burger & cơm', 0);
 
 -- --------------------------------------------------------
 
@@ -196,23 +171,23 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id_product`, `id_catalog`, `name_catalog`, `name`, `price`, `content`, `discount`, `image_link`, `image_list`, `created`, `view`, `meta_key`, `site_title`, `warranty`, `total`, `buyed`, `rate_total`, `rate_count`, `gifts`, `meta_desc`) VALUES
-(11, 17, 'Chanel', 'Chanel classic F1', '315000.0000', '<p>\r\n	sadsad</p>\r\n', 1000, 'tui_xach.jpg', '["13614980_298867220462662_7145359368991707893_n.jpg","13615420_298867270462657_6842337585805229283_n.jpg","13619925_298867253795992_3631405696801658292_n.jpg"]', '2016-07-09', 10, '', '', '2 thang', 0, 0, 0, 0, '', ''),
-(13, 30, 'Hàng Quảng Châu', 'LV tua rua', '310000.0000', '<p>\r\n	LV tua rua</p>\r\n', 0, '13599830_299090640440320_6496556368805815886_n.jpg', '["13599991_299090647106986_7179268951218761191_n.jpg","13606862_299090673773650_7320035087091427003_n.jpg","13631573_299090683773649_8243380948476688954_n.jpg"]', '2016-07-09', 20, '', '', '2 tuan', 0, 0, 0, 0, '', ''),
-(14, 14, 'Hermes', 'Hermes birkin sp', '410000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Hermes birkin sp</span></p>\r\n', 0, '13615181_299115950437789_1504856732614196552_n.jpg', '["13615385_299116040437780_8391977453206660277_n.jpg","13620017_299116003771117_1297039682149352364_n.jpg","13627070_299115977104453_5448456580397929957_n.jpg"]', '2016-07-09', 30, '', '', '1 tuan', 0, 0, 0, 0, '', ''),
-(15, 6, 'Clutch 802', 'Clutch đinh', '290000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Clutch đinh</span></p>\r\n', 0, '13557676_299089713773746_2507892125045042132_n.jpg', '["13590386_299089760440408_3391886600509733991_n.jpg","13654336_299089727107078_6481126660454574794_n.jpg"]', '2016-07-09', 22, '', '', '1 tuan', 0, 0, 0, 0, '', ''),
-(16, 28, 'Balo', 'Balo', '320000.0000', '<p>\r\n	Balo</p>\r\n', 0, '13619902_298665540482830_8918037663224419882_n.jpg', '["13620388_298665560482828_1851988972810371015_n.jpg","13620722_298665617149489_4734176029892801441_n.jpg"]', '2016-07-09', 33, '', '', '2 tuần', 0, 0, 0, 0, '', ''),
-(17, 6, 'Clutch 802', 'Clutch 802 size 24', '280000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Clutch 802 size 24</span></p>\r\n', 0, '13438928_298603500489034_5457089791188914833_n.jpg', '["13606465_298603477155703_3059456594083059953_n.jpg","13606747_298603520489032_6474200844494580468_n.jpg","13627120_298603460489038_6973549491376476769_n.jpg"]', '2016-07-09', 50, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
-(18, 19, 'Gucci', 'Túi gucci', '190000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">T&uacute;i gucci</span></p>\r\n', 0, '13466489_290040671345317_7753309319988685596_n.jpg', '[]', '2016-07-09', 90, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
-(19, 6, 'Clutch 802', 'Clutch Cầm Tay', '320000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">clutch&nbsp;</span></p>\r\n', 0, '13567298_298570177159033_6552233824450347422_n.jpg', '["13590513_298570180492366_2492956343426419367_n.jpg","13592408_298570147159036_8685869898076639971_n.jpg","13645307_298570100492374_1223246558300991758_n.jpg"]', '2016-07-09', 60, 'tui,  xach, nu', 'Túi xách nữ | Clutch Cầm Tay giá rẻ tại đà nẵng', '2 tuần', 0, 0, 0, 0, '', ''),
-(20, 17, 'Chanel', 'Chanel katun F1 full box', '190000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Chanel katun F1 full box</span></p>\r\n', 0, '13600266_298174893865228_3513220343463710447_n.jpg', '["13567209_298174860531898_7615003385079743382_n.jpg","13590432_298174873865230_8528988660007920678_n.jpg","13619795_298174837198567_6246125812867267035_n.jpg"]', '2016-07-09', 70, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
-(21, 23, 'Phấn Má Hồng', 'Phấn mắt Sivanna Thái Lan', '100000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Phấn mắt Sivanna Th&aacute;i Lan</span></p>\r\n', 10000, '13600364_290802907977115_8211585694149140613_n.jpg', '["13620924_290802884643784_2615715308299908547_n.jpg","13627215_290802924643780_7695910339187221835_n.jpg","13645166_290802944643778_1461184177608036818_n.jpg"]', '2016-07-09', 80, '', '', '2 tuần', 0, 0, 0, 0, '', ''),
-(22, 25, 'Sửa Tắm', 'Sữa tắm Aloe Ha', '70000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Sữa tắm Aloe Ha</span></p>\r\n', 0, '13567285_290801947977211_39567870285877944_n.jpg', '[]', '2016-07-09', 55, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
-(23, 25, 'Sửa Tắm', 'Magic Baby', '90000.0000', '<p>\r\n	Magic Baby</p>\r\n', 5000, '13592401_290802021310537_6977690982614048850_n.jpg', '[]', '2016-07-09', 23, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
-(24, 8, 'Sửa Rửa Mặt', 'READY 2 WHITE MILKY WHITE', '60000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">READY 2 WHITE MILKY WHITE</span></p>\r\n', 0, '13612103_290664661324273_2836539995969428316_n.jpg', '[]', '2016-07-09', 92, '', '', '1 tháng', 0, 0, 0, 0, '', ''),
-(25, 25, 'Sửa Tắm', 'Sữa tắm Shena', '90000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 18px;">Sữa tắm Shena</span></p>\r\n', 0, '13606474_289030954820977_7711196167287114349_n.jpg', '[]', '2016-07-09', 66, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
-(26, 28, 'Balo', 'Balo Chiếc Lá', '280000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 18px;">Balo Chiếc L&aacute;</span></p>\r\n', 10000, '13592711_287170001673739_7637902183671685761_n.jpg', '["13599889_287169968340409_1943356769194407325_n.jpg"]', '2016-07-09', 55, '', '', '2 tuần', 0, 0, 0, 0, '', ''),
-(27, 11, 'Kính phượt', 'Kính Porsche Design 8632', '320000.0000', '<h1 class="product_title entry-title" itemprop="name" style="font-family: Arial; box-sizing: border-box; margin: 0px 0px 10px; font-size: 20px; font-weight: 500; line-height: 1.1; clear: none; padding: 0px; background-color: rgb(252, 252, 252);">\r\n	K&iacute;nh Porsche Design 8632</h1>\r\n', 20000, '13063357_841673445966647_8681064950386424491_o-462x392.jpg', '[]', '2016-07-09', 44, '', '', '2 tháng', 0, 0, 0, 0, '', ''),
-(28, 20, 'Coach', 'Chanel Da Hồng Nhạt', '190000.0000', '<p>\r\n	channal t&uacute;i hồng</p>\r\n', 10000, '13615164_301084113574306_6125822305132471482_n.jpg', '["13626504_301084130240971_5216208883844769367_n.jpg","13631453_301084183574299_5910913077681429500_n.jpg","13686504_301084150240969_5957793359577683372_n.jpg"]', '2016-07-13', 0, 'tui, xach, nam, nu, da, nang', 'Túi xách nữ, Chanel Da Hồng Nhạt , tại đà nẵng,', '2 tuần', 0, 0, 0, 0, '', '');
+(11, 1, 'Các món gà', 'Gà giòn cay', '315000.0000', '<p>\r\n	sadsad</p>\r\n', 1000, 'ga-gion-cay-1.jpg', '["ga-gion-cay-1.jpg","ga-gion-cay-1.jpg","ga-gion-cay-1.jpg"]', '2016-07-09', 10, '', '', '2 thang', 0, 0, 0, 0, '', ''),
+(13, 1, 'Các món gà', 'Cánh gà giòn cay', '310000.0000', '<p>\r\n	LV tua rua</p>\r\n', 0, 'canh-ga-gion-cay-1.jpg', '["canh-ga-gion-cay-1.jpg","canh-ga-gion-cay-1.jpg","canh-ga-gion-cay-1.jpg"]', '2016-07-09', 20, '', '', '2 tuan', 0, 0, 0, 0, '', ''),
+(14, 1, 'Các món gà', 'Gà truyền thống', '410000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Hermes birkin sp</span></p>\r\n', 0, 'ga-truyen-thong-1.jpg', '["ga-truyen-thong-1.jpg","ga-truyen-thong-1.jpg","ga-truyen-thong-1.jpg"]', '2016-07-09', 30, '', '', '1 tuan', 0, 0, 0, 0, '', ''),
+(15, 1, 'Các món gà', 'Gà quay tiêu', '290000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Clutch đinh</span></p>\r\n', 0, 'ga-quay-tieu-1.jpg', '["ga-quay-tieu-1.jpg","ga-quay-tieu-1.jpg"]', '2016-07-09', 22, '', '', '1 tuan', 0, 0, 0, 0, '', ''),
+(16, 1, 'Các món gà', 'Gà quay giấy bạc', '320000.0000', '<p>\r\n	Balo</p>\r\n', 0, 'ga-quay-giay-bac-1.jpg', '["ga-quay-giay-bac-1.jpg","ga-quay-giay-bac-1.jpg"]', '2016-07-09', 33, '', '', '2 tuần', 0, 0, 0, 0, '', ''),
+(17, 1, 'Các món gà', 'Gà xiên que', '280000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Clutch 802 size 24</span></p>\r\n', 0, 'ga-xien-que-1.jpg', '["ga-xien-que-1.jpg","ga-xien-que-1.jpg","ga-xien-que-1.jpg"]', '2016-07-09', 50, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
+(18, 1, 'Các món gà', 'Cánh gà giòn vị cay Tom Yum', '190000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">T&uacute;i gucci</span></p>\r\n', 0, 'canh-ga-gion-vi-cay-Tom-Yum-1.jpg', '[]', '2016-07-09', 90, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
+(19, 2, 'Phần ăn combo', 'Combo burger vàng', '320000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">clutch&nbsp;</span></p>\r\n', 0, 'combo-burger-vang-1.jpg', '["combo-burger-vang-1.jpg","combo-burger-vang-1.jpg","combo-burger-vang-1.jpg"]', '2016-07-09', 60, 'tui,  xach, nu', 'Túi xách nữ | Clutch Cầm Tay giá rẻ tại đà nẵng', '2 tuần', 0, 0, 0, 0, '', ''),
+(20, 2, 'Phần ăn combo', 'Combo gà vàng', '190000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Chanel katun F1 full box</span></p>\r\n', 0, 'combo-ga-vang-1.jpg', '["combo-ga-vang-1.jpg","combo-ga-vang-1.jpg"]', '2016-07-09', 70, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
+(21, 2, 'Phần ăn combo', 'Combo gà rán', '100000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Phấn mắt Sivanna Th&aacute;i Lan</span></p>\r\n', 10000, 'combo-ga-ran-1.jpg', '["combo-ga-ran-1.jpg","combo-ga-ran-1.jpg","combo-ga-ran-1.jpg"]', '2016-07-09', 80, '', '', '2 tuần', 0, 0, 0, 0, '', ''),
+(22, 2, 'Phần ăn combo', 'Combo phần ăn trẻ em', '70000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">Sữa tắm Aloe Ha</span></p>\r\n', 0, 'combo-phan-an-tre-em-1.jpg', '[]', '2016-07-09', 55, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
+(23, 2, 'Phần ăn combo', 'Combo chizza', '90000.0000', '<p>\r\n	Magic Baby</p>\r\n', 5000, 'combo-chizza-1.jpg', '[]', '2016-07-09', 23, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
+(24, 3, 'Burger & cơm', 'Burger tôm', '60000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 19.32px;">READY 2 WHITE MILKY WHITE</span></p>\r\n', 0, 'burger-tom-1.jpg', '[]', '2016-07-09', 92, '', '', '1 tháng', 0, 0, 0, 0, '', ''),
+(25, 3, 'Burger & cơm', 'Burger gà quay', '90000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 18px;">Sữa tắm Shena</span></p>\r\n', 0, 'burger-ga-quay-1.jpg', '[]', '2016-07-09', 66, '', '', '1 tuần', 0, 0, 0, 0, '', ''),
+(26, 3, 'Burger & cơm', 'Cơm gà truyền thống', '280000.0000', '<p>\r\n	<span style="color: rgb(29, 33, 41); font-family: Arial; font-size: 14px; line-height: 18px;">Balo Chiếc L&aacute;</span></p>\r\n', 10000, 'com-ga-truyen-thong-1.jpg', '["com-ga-truyen-thong-1.jpg"]', '2016-07-09', 55, '', '', '2 tuần', 0, 0, 0, 0, '', ''),
+(27, 3, 'Burger & cơm', 'Cơm gà rán giòn cay', '320000.0000', '<h1 class="product_title entry-title" itemprop="name" style="font-family: Arial; box-sizing: border-box; margin: 0px 0px 10px; font-size: 20px; font-weight: 500; line-height: 1.1; clear: none; padding: 0px; background-color: rgb(252, 252, 252);">\r\n	K&iacute;nh Porsche Design 8632</h1>\r\n', 20000, 'com-ga-ran-gion-cay-1.jpg', '[]', '2016-07-09', 44, '', '', '2 tháng', 0, 0, 0, 0, '', ''),
+(28, 3, 'Burger & cơm', 'Cơm đùi gà quay tiêu', '190000.0000', '<p>\r\n	channal t&uacute;i hồng</p>\r\n', 10000, 'com-dui-ga-quay-tieu-1.jpg', '["com-dui-ga-quay-tieu-1.jpg","com-dui-ga-quay-tieu-1.jpg","com-dui-ga-quay-tieu-1.jpg"]', '2016-07-13', 0, 'tui, xach, nam, nu, da, nang', 'Túi xách nữ, Chanel Da Hồng Nhạt , tại đà nẵng,', '2 tuần', 0, 0, 0, 0, '', '');
 
 -- --------------------------------------------------------
 

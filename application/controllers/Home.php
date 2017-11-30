@@ -27,20 +27,23 @@
             $this->pagination->initialize($config);
             $segment = $this->uri->segment(3);
             $segment = intval($segment);
-            $input = array();
-            $input['limit'] = array($config['per_page'], $segment);
-            // end phan trang
-            $product_news = $this->product_model->get_list($input);
-            $this->data['product_news'] = $product_news;
 
+            // combo
+            $input['limit'] = array(4,0);
+            $input['where'] = array('id_catalog =' => 2);
+            $product_combo = $this->product_model->get_list($input);
+            $this->data['product_combo'] = $product_combo;
 
+            // Cac mon ga
+            $input['limit'] = array(4,0);
+            $input['where'] = array('id_catalog =' => 1);
+            $product_fried_chicken = $this->product_model->get_list($input);
+            $this->data['product_fried_chicken'] = $product_fried_chicken;
 
-            // san pham giam gia
-            $input['limit'] = array(9,0);
-            $input['where'] = array('discount >' => 0);
-
-            $product_sale = $this->product_model->get_list($input);
-            $this->data['product_sale'] = $product_sale;
+            $input['limit'] = array(4,0);
+            $input['where'] = array('id_catalog =' => 3);
+            $product_burger_rice = $this->product_model->get_list($input);
+            $this->data['product_burger_rice'] = $product_burger_rice;
             
             // load view
             $this->data['temp'] = 'site/home/index';

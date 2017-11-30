@@ -54,13 +54,13 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
-$route['tui-xach-da-nang'] = 'Home/index';
-$route['san-pham/danh-muc/(:any)/(:num)'] = 'product/catalog/$2';
-$route['san-pham/danh-muc/(:any)/(:num)/(:num)'] = 'product/catalog/$2/$3';
+$route['home'] = 'Home/index';
+$route['menu/(:any)/(:num)'] = 'product/catalog/$2';
+$route['menu/(:any)/(:num)/(:num)'] = 'product/catalog/$2/$3';
 $route['chi-tiet-san-pham/(:any)/(:any)/(:num)'] = 'product/view/$3';
+$route['gallery'] = 'Home';
+$route['details/(:any)/(:num)'] = 'product/view/$3';
 
-
-
-
-
-
+$route['admin/transaction'] = 'Transaction';
+$route['admin/login'] = 'Login';
+$route['admin/home'] = 'Admin';

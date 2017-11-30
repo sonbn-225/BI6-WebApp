@@ -4,6 +4,7 @@
         {
             parent::__construct();
         }
+        
         function add(){
             $id_product = $this->uri->rsegment('3');
             $id_product = intval($id_product);
