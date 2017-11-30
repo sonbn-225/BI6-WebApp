@@ -6,6 +6,7 @@
             $this->load->model('product_model');
             $this->load->helper('name_helper');
         }
+        
         function catalog(){
 
             //  lay ra id danh muc san pham
@@ -17,21 +18,8 @@
                 redirect();
             }
 
-            // kiem tra co phai la danh muc cha hay ko
             $input = array();
-            if($catalog_info->parent_id == 0){
-                $input_catalog['where'] = array('parent_id' => $id_catalog);
-                $catalog_sub = $this->catalog_model->get_list($input_catalog);
-                $catalog_subs_id = array();
-                if(!empty($catalog_sub)) {
-                    foreach ($catalog_sub as $row) {
-                        $catalog_subs_id[] = $row->id_catalog;
-                    }
-                }
-                $this->db->where_in('id_catalog', $catalog_subs_id);
-            }else{
-                $input['where'] = array('id_catalog' => $id_catalog);
-            }
+            $input['where'] = array('id_catalog =' => $id_catalog);
 
             // lay danh sach san pham
             $this->load->model('product_model');
@@ -47,13 +35,14 @@
             $config['uri__segment'] = 5; // phan doan hien thi ra so trang tren url. !
             $config['next_link'] = 'Trang kế tiếp';
             $config['prev_link'] = 'Trang trước';
+
             // khoi tao cac cau hinh cua phan trang
             $this->pagination->initialize($config);
             $segment = $this->uri->segment(5);
             $segment = intval($segment);
             //pre($segment);
-            $input = array();
-            $input['limit'] = array($config['per_page'], $segment);
+            // $input = array();
+            // $input['limit'] = array($config['per_page'], $segment);
             // end phan trang
 
             if(isset($catalog_subs_id)){
