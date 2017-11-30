@@ -11,6 +11,7 @@
 
             //  lay ra id danh muc san pham
             $this->load->model('catalog_model');
+            
             $id_catalog = $this->uri->rsegment('3');
             $id_catalog = intval($id_catalog);
             $catalog_info = $this->catalog_model->get_info($id_catalog);
@@ -18,6 +19,7 @@
                 redirect();
             }
 
+            $menu = $this->catalog_model->get_info($id_catalog);
             $input = array();
             $input['where'] = array('id_catalog =' => $id_catalog);
 
@@ -38,19 +40,10 @@
 
             // khoi tao cac cau hinh cua phan trang
             $this->pagination->initialize($config);
-            $segment = $this->uri->segment(5);
-            $segment = intval($segment);
-            //pre($segment);
-            // $input = array();
-            // $input['limit'] = array($config['per_page'], $segment);
-            // end phan trang
-
-            if(isset($catalog_subs_id)){
-                $this->db->where_in('id_catalog', $catalog_subs_id);
-            }
             $list = $this->product_model->get_list($input);
             //pre($this->db->last_query($list));
             $this->data['list'] = $list;
+            $this->data['menu'] = $menu;
             $this->data['temp'] = 'site/product/catalog';
             $this->load->view('site/layout', $this->data);
 
