@@ -19,7 +19,6 @@
                 redirect();
             }
 
-            $menu = $this->catalog_model->get_info($id_catalog);
             $input = array();
             $input['where'] = array('id_catalog =' => $id_catalog);
 
@@ -43,7 +42,7 @@
             $list = $this->product_model->get_list($input);
             //pre($this->db->last_query($list));
             $this->data['list'] = $list;
-            $this->data['menu'] = $menu;
+            $this->data['menu'] = $catalog_info;
             $this->data['temp'] = 'site/product/catalog';
             $this->load->view('site/layout', $this->data);
 

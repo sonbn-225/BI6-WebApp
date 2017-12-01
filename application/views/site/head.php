@@ -5,6 +5,9 @@
 <link rel="stylesheet" type="text/css" href="<?php echo public_url('site') ?>/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<?php echo public_url('site') ?>/css/style2.css">
 <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href="<?php echo public_url('site'); ?>/css/sb-admin.css" rel="stylesheet">
+<!-- Custom fonts for this template-->
+<link href="<?php echo public_url('site') ?>/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
     var gmap = new google.maps.LatLng(21.046485, 105.794763);

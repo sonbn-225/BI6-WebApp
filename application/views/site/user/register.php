@@ -1,51 +1,47 @@
-﻿<style>
-    div.form-login p{
-        margin-bottom: 10px;
-    }
-    div.form-login i{
-        color: red;
-    }
-</style>
-<div class="tab-catalog" style="width: 1340px; margin: 0px auto; height: auto;">
-    <div class="container">
-        <div class="row" style="margin-left: 492px;">
-            <div class="form-login">
-            <form action="" name="register" method="post" enctype="multipart/form-data">
-                <h3 class="title">Đăng Ký Tài Khoản</h3>
-                <p>
-                    <input type="text" name="name"  placeholder="Tên Của Bạn">
-
-                </p>
-                <i><?php echo form_error('name'); ?></i>
-                <p>
-                    <input type="email" name="email" placeholder="Email Của Bạn">
-                </p>
-                <i><?php echo form_error('email'); ?></i>
-                <p>
-                    <input type="password" name="password" placeholder="Mật Khẩu" >
-                </p>
-                <i><?php echo form_error('password'); ?></i>
-                <p>
-                    <input type="password" name="rpassword" placeholder="Nhập Lại Mật Khẩu" >
-                </p>
-                <i><?php echo form_error('rpassword'); ?></i>
-                <p>
-                    <input type="text" name="phone" placeholder="Số Điện Thoại Của Bạn" >
-                </p>
-                <i><?php echo form_error('phone'); ?></i>
-                <p>
-                    <input type="text" name="adress" placeholder="Địa Chỉ Của Bạn" >
-                </p>
-                <i><?php echo form_error('adress'); ?></i>
-                <label class="inline" for="rememberme">
-                    <input type="checkbox" value="forever" id="rememberme" name="approved">
-                    Đồng Ý Với Các Điều Khoản Của Chúng Tôi.!
-                </label><i><?php echo form_error('approved'); ?></i><br />
-                <button class="button primary" type="reset" >Nhập Lại</button>
-                <button class="button primary" type="submit">Đăng Ký</button>
-            </form>
+﻿<div class="container">
+    <div class="card card-register mx-auto mt-5">
+      <div class="card-header">Register an Account</div>
+      <div class="card-body">
+        <form name="register" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="exampleInputName">君の名は。</label>
+            <input class="form-control" type="text" aria-describedby="nameHelp" name="name"  placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input class="form-control" type="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="exampleInputPassword1">Password</label>
+                <input class="form-control" type="password" name="password" placeholder="Password" >
+              </div>
+              <div class="col-md-6">
+                <label for="exampleConfirmPassword">Confirm password</label>
+                <input class="form-control" type="password" name="rpassword" placeholder="Confirm password" >
+              </div>
             </div>
-
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Phone number</label>
+            <input class="form-control" type="text" name="phone" placeholder="Enter phone number" >
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Address</label>
+            <input class="form-control" type="text" name="adress" placeholder="Enter address" >
+          </div>
+          <div class="form-group">
+          <label class="inline" for="rememberme">
+                    <input type="checkbox" value="forever" id="rememberme" name="approved">
+                    Accept our privacy!
+            </div>
+          <a class="btn btn-primary btn-block button primary" type="submit">Register</a>
+        </form>
+        <div class="text-center">
+          <a class="d-block small mt-3" href="<?php echo base_url('login'); ?>">Had an account? Login now!</a>
+          <a class="d-block small mt-3" href="<?php echo base_url(); ?>">Back to Homepage</a>
         </div>
+      </div>
     </div>
-</div>
+  </div>

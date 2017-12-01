@@ -57,9 +57,9 @@ $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'Home/index';
 $route['menu/(:any)/(:num)'] = 'product/catalog/$2';
 $route['menu/(:any)/(:num)/(:num)'] = 'product/catalog/$2/$3';
-$route['chi-tiet-san-pham/(:any)/(:any)/(:num)'] = 'product/view/$3';
-$route['gallery'] = 'Home';
-$route['details/(:any)/(:num)'] = 'product/view/$3';
+$route['details/(:any)/(:num)'] = 'product/view/$2';
+$route['signup'] = 'User/register';
+$route['login'] = 'User/login';
 
 $route['admin/transaction'] = 'Transaction';
 $route['admin/login'] = 'Login';

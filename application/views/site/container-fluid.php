@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="<?php echo base_url(); ?>" class="navbar-brand"><img src="<?php echo public_url('site') ?>/images/logo.png" alt="Logo"></a>
+                <a href="<?php echo base_url(); ?>" class="navbar-brand"><img src="<?php echo public_url('site') ?>/images/logo.png" style="width: 400px; height:100px;" alt="Logo"></a>
             </div>
 
             <div class="navbar-collapse collapse" id="menu">
@@ -22,6 +22,8 @@
                     </li>                
                     <li><a href="<?php echo base_url('gallery'); ?>">Gallery</a></li>
                     <li><a href="<?php echo base_url('cart'); ?>">Cart</a></li>
+                    <li><a href="<?php echo base_url('signup'); ?>" id="SignUp">Sign Up</a></li>
+                    <li><a href="<?php echo base_url('login'); ?>" id="LogIn">Log In</a></li>
                 </ul>
             </div>
         </div>

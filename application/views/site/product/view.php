@@ -4,26 +4,23 @@
     <div class="col-sm-6 col-md-6 col-lg-6" >
         <div class="images kt-images">
             <div class="kt-main-image">
-                <a title="<?php echo $product_info->site_title; ?>" class="zoom" href="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>"><img style="width: 376px; height: 320px; margin-left: 8px;" src="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" alt="<?php echo $product_info->name; ?>"></a>
+                <a title="<?php echo $product_info->site_title; ?>" class="zoom" href="<?php echo public_url('site') ?>/images/<?php echo $product_info->image_link; ?>"><img style="width: 376px; height: 320px; margin-left: 8px;" src="<?php echo public_url('site') ?>/images/<?php echo $product_info->image_link; ?>" alt="<?php echo $product_info->name; ?>"></a>
             </div>
             <div class="kt-thumbs" style="height: 80px;">
                 <div class="owl-carousel" data-items="1" data-nav="true" data-animateout="slideInUp" data-animatein="slideInUp">
                     <?php $image_list = json_decode($product_info->image_list) ?>
                     <?php if(is_array($image_list)){ ?>
-
-                    <div class="page-thumb">
-                        <?php foreach ($image_list as $img): ?>
-                        <a class="item-thumb zoom" href="<?php echo base_url('upload') ?>/products/<?php echo $img ?>"><img style="width: 100px; height:100px;" src="<?php echo base_url('upload') ?>/products/<?php echo $img ?>" alt="<?php echo $product_info->name; ?>"></a>
-                        <?php endforeach; ?>
-                    </div>
+                        <div class="page-thumb">
+                            <?php foreach ($image_list as $img): ?>
+                            <a class="item-thumb zoom" href="<?php echo public_url('site') ?>/images/<?php echo $img ?>"><img style="width: 100px; height:100px;" src="<?php echo public_url('site') ?>/images/<?php echo $img ?>" alt="<?php echo $product_info->name; ?>"></a>
+                            <?php endforeach; ?>
+                        </div>
                     <?php } ?>
-
-
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-6 col-md-6 col-lg-6"">
+    <div class="col-sm-6 col-md-6 col-lg-6">
         <div class="summary">
             <h1 title="<?php echo $product_info->site_title; ?>"  class="product_title entry-title"><?php echo $product_info->name; ?></h1>
             <?php if($product_info->discount > 0){ ?>
@@ -32,15 +29,6 @@
             <?php }else{ ?>
                 Giá: <span class="price" style="font-size: 15px; color: #800000; "><?php echo number_format($product_info->price - $product_info->discount); ?> VNĐ</span>
             <?php }?>
-            <p class="stock out-of-stock"><label>Tình Trạng:</label> <i class="fa fa-check"></i> Còn Hàng </p>
-            <div class="rating" title="Rated 3 out of 5">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-                <i class="fa fa-star-o"></i>
-                <span>(3 reviews)</span>
-            </div>
             <div class="short-descript">
                 <p><strong>Thông tin:</strong><?php echo $product_info->content; ?></p>
             </div>
@@ -64,13 +52,9 @@
 </div>
 
 <div class="product-tabs">
-    <ul class="nav-tab">
-        <li class="active"><a data-toggle="tab" href="#tab-1">Đánh Giá</a></li>
-        <li><a data-toggle="tab" href="#tab-2">Sản Phẩm Liên Quan</a></li>
-    </ul>
     <div class="tab-container" >
         <div id="tab-1" class="tab-panel active">
-            <div class="fb-comments" data-href="<?php echo base_url('chi-tiet-san-pham/'.seoname($product_info->name_catalog).'/'.seoname($product_info->name).'/'.$product_info->id_product) ?>" data-colorscheme="light" data-numposts="5" data-width="500"></div>
+            <div class="fb-comments" data-href="<?php echo base_url('details/'.seoname($product_info->name).'/'.$product_info->id_product); ?>" data-colorscheme="light" data-numposts="5" data-width="500"></div>
         </div>
         <div id="tab-2" class="tab-panel" style="margin-bottom: 370px; ">
             <div id="tab-1" class="tab-panel active">
@@ -79,35 +63,12 @@
                         <li class="product-item style6" style="float: left; width: 233px; height: 390px;">
                             <div class="product-inner">
                                 <div class="thumb">
-                                    <a href="<?php echo base_url('chi-tiet-san-pham/'.seoname($row->name_catalog).'/'.seoname($row->name).'/'.$row->id_product) ?>" title="<?php echo $row->site_title; ?>">
-                                        <img style="width: 230px; height: 297px;" src="<?php echo base_url('upload'); ?>/products/<?php echo $row->image_link; ?>" alt="<?php echo $row->name; ?>">
+                                    <a href="<?php echo base_url('details/'.seoname($row->name).'/'.$row->id_product); ?>" title="<?php echo $row->site_title; ?>">
+                                        <img style="width: 230px; height: 297px;" src="<?php echo public_url('site') ?>/images/<?php echo $row->image_link; ?>" alt="<?php echo $row->name; ?>">
                                     </a>
-                                    <div class="group-button">
-                                        <a class="wishlist" href="">Yêu Thích</a>
-                                        <a class="compare button" href="<?php echo base_url('chi-tiet-san-pham/'.seoname($row->name_catalog).'/'.seoname($row->name).'/'.$row->id_product) ?>" title="<?php echo $row->site_title; ?>">Chi Tiết</a>
-                                        <a class="button add_to_cart_button" href="<?php echo base_url('cart/add/'.$row->id_product); ?>">Thêm Vào Giỏ</a>
-                                    </div>
-
                                 </div>
                                 <div class="info">
-
                                     <h3 class="product-name short"><a href="<?php echo base_url('chi-tiet-san-pham/'.seoname($row->name_catalog).'/'.seoname($row->name).'/'.$row->id_product) ?>" title="<?php echo $row->site_title; ?>" ><?php echo $row->name; ?></a></h3>
-												<span class="price">
-                                                <?php if($row->discount > 0){ ?>
-                                                    <ins><?php echo number_format($row->price - $row->discount); ?> VNĐ</ins>
-                                                    <del><?php echo number_format($row->price); ?> VNĐ</del>
-                                                <?php }else{ ?>
-                                                    <ins><?php echo number_format($row->price); ?> VNĐ</ins>
-                                                <?php }?>
-												</span>
-                                    <div class="rating"  title="Rated 3 out of 5">
-                                        <i class="active fa fa-star"></i>
-                                        <i class="active fa fa-star"></i>
-                                        <i class="active fa fa-star"></i>
-                                        <i class="active fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-
-                                    </div>
                                 </div>
                             </div>
                         </li>

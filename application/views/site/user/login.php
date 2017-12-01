@@ -1,31 +1,28 @@
-<style>
-    div.form-login p{
-        margin-bottom: 10px;
-    }
-    div.form-login i{
-        color: red;
-    }
-</style>
 <div class="tab-catalog" style="width: 1340px; margin: 0px auto; height: auto;">
-    <div class="container">
-        <div class="row" style="margin-left: 492px;">
-            <div class="form-login">
-                <form action="<?php echo base_url('user/login'); ?>" name="login" method="post" enctype="multipart/form-data">
-                    <h3 class="title">Đăng Nhập Tài Khoản</h3>
-                    <label style="color: red;"><?php echo form_error('login'); ?></label>
-                    <p>
-                        <input type="email" name="email" placeholder="Email Của Bạn">
-                    </p>
-                    <i><?php echo form_error('email'); ?></i>
-                    <p>
-                        <input type="password" name="password" placeholder="Mật Khẩu" >
-                    </p>
-                    <i><?php echo form_error('password'); ?></i>
-
-                    <button class="button primary" type="submit">Đăng Nhập</button>
-                </form>
+<div class="container">
+    <div class="card card-login mx-auto mt-5">
+      <div class="card-header">Login</div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input class="form-control" type="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input class="form-control" type="password" name="password" placeholder="Password" >
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Remember Me</label>
             </div>
-
+          </div>
+          <a class="btn btn-primary btn-block button primary" type="submit">Login</a>
+        </form>
+        <div class="text-center">
+          <a class="d-block small" href="<?php echo base_url(); ?>">Back to homepage</a>
         </div>
+      </div>
     </div>
 </div>
