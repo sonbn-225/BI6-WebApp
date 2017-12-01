@@ -24,13 +24,13 @@
             $this->load->library('form_validation');
             $this->load->helper('form');
             if($this->input->post()){
-                $this->form_validation->set_rules('name', 'Nhập Họ tên ', 'required' );
-                $this->form_validation->set_rules('email', 'Nhập Email ', 'required|valid_email|callback_check_email' );
-                $this->form_validation->set_rules('password', 'Nhập password ', 'required|min_length[4]' );
-                $this->form_validation->set_rules('rpassword', 'Nhập Nhập lại Password ', 'required|matches[password]' );
-                $this->form_validation->set_rules('phone', 'Nhập Số Điện Thoại ', 'required' );
-                $this->form_validation->set_rules('adress', 'Nhập Địa Chỉ', 'required' );
-                $this->form_validation->set_rules('approved', 'Đồng Ý Với Các Điều Khoản Của Chúng Tôi', 'required' );
+                $this->form_validation->set_rules('name', 'Enter Name', 'required' );
+                $this->form_validation->set_rules('email', 'Enter Email ', 'required|valid_email|callback_check_email' );
+                $this->form_validation->set_rules('password', 'Enter password ', 'required|min_length[4]' );
+                $this->form_validation->set_rules('rpassword', 'Confirm Password ', 'required|matches[password]' );
+                $this->form_validation->set_rules('phone', 'Enter Phone Number ', 'required' );
+                $this->form_validation->set_rules('adress', 'Enter Address', 'required' );
+                $this->form_validation->set_rules('approved', 'Accept our privacy', 'required' );
                 if($this->form_validation->run()){
                     $name = $this->input->post('name');
                     $email = $this->input->post('email');

@@ -68,7 +68,7 @@
                                     </a>
                                 </div>
                                 <div class="info">
-                                    <h3 class="product-name short"><a href="<?php echo base_url('chi-tiet-san-pham/'.seoname($row->name_catalog).'/'.seoname($row->name).'/'.$row->id_product) ?>" title="<?php echo $row->site_title; ?>" ><?php echo $row->name; ?></a></h3>
+                                    <h3 class="product-name short"><a href="<?php echo base_url('details/'.seoname($row->name).'/'.$row->id_product); ?>" title="<?php echo $row->site_title; ?>" ><?php echo $row->name; ?></a></h3>
                                 </div>
                             </div>
                         </li>

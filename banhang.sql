@@ -64,6 +64,21 @@ INSERT INTO `catalog` (`id_catalog`, `name`, `parent_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `qty` int(4) NOT NULL,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `name_catalog` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `image_link` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `price` decimal(15,4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `order`
 --
 

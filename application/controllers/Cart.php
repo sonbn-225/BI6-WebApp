@@ -6,6 +6,7 @@
         }
         
         function add(){
+            $this->load->model('cart_model');
             $id_product = $this->uri->rsegment('3');
             $id_product = intval($id_product);
             $product_info = $this->product_model->get_info($id_product);
@@ -28,9 +29,10 @@
             $data['image_link'] = $product_info->image_link;
             $data['price'] = $price;
             // in sert du lieu vao thu vien cart
-            $this->cart->insert($data);
+            $this->cart_model->create($data);
             redirect(base_url('cart/index'));
         }
+
         function index(){
             $carts = $this->cart->contents();
             $this->data['carts'] = $carts;
